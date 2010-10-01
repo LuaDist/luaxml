@@ -1,0 +1,14 @@
+--- This file is part of LuaDist project
+
+name = "luaxml"
+version = "1.7.3"
+
+desc = "A minimal set of XML processing function in Lua, with simple mapping between XML and Lua tables"
+author = "Gerald Franz"
+license = "MIT/X11"
+url = "http://www.viremo.de/LuaXML/"
+maintainer = "Peter Drahoš"
+
+depends = {
+	"lua ~> 5.1"
+}

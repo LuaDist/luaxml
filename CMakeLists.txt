@@ -1,22 +1,22 @@
-# Copyright (C) 2007-2009 LuaDist.
+# Copyright (C) 2007-2012 LuaDist.
 # Submitted by David Manura
 # Redistribution and use of this file is allowed according to the terms of the MIT license.
 # For details see the COPYRIGHT file distributed with LuaDist.
 # Please note that the package source code is licensed under its own license.
 
-PROJECT(luaxml C)
-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
-INCLUDE(dist.cmake)
+project ( luaxml C )
+cmake_minimum_required ( VERSION 2.8 )
+include ( cmake/dist.cmake )
+include ( lua )
 
-IF (MSVC)
-  ADD_DEFINITIONS(-TP) # treat as C++ for C99-ish features
-  SET(WORKAROUND _cpp)
-ENDIF (MSVC)
+if ( MSVC )
+  add_definitions ( -TP )
+  # treat as C++ for C99-ish features
+  set ( WORKAROUND _cpp )
+endif ( MSVC )
 
-ADD_LUA_MODULE(luaXML_lib LuaXML_lib${WORKAROUND}.c)
-
-# Install all files and documentation
-INSTALL (TARGETS luaXML_lib DESTINATION ${INSTALL_CMOD})
-INSTALL (FILES LuaXml.lua DESTINATION ${INSTALL_LMOD}/)
-INSTALL (FILES test.lua test.xml DESTINATION ${INSTALL_EXAMPLE})
-INSTALL (FILES readme.txt LuaXml.cdr LuaXml.png DESTINATION ${INSTALL_DATA})
+install_lua_module ( luaXML_lib LuaXML_lib${WORKAROUND}.c )
+install_lua_module ( LuaXml LuaXml.lua )
+install_test ( test.lua test.xml )
+install_data ( readme.txt )
+install_foo ( LuaXml.cdr LuaXml.png )

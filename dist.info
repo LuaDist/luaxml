@@ -1,0 +1,35 @@
+type = "x86_64"
+arch = "Ubuntu"
+author = "Gerald Franz"
+depends = {
+[[lua ~> 5.1]],
+}
+
+desc = "A minimal set of XML processing function in Lua, with simple mapping between XML and Lua tables"
+version = "1.7.3"
+maintainer = "Peter Drahoš"
+files = {
+Runtime = {
+[[lib/lua/luaXML_lib.so]],
+[[lib/lua/LuaXml.lua]],
+}
+,
+Test = {
+[[share/luaxml/test/test.lua]],
+[[share/luaxml/test/test.xml]],
+}
+,
+Data = {
+[[share/luaxml/readme.txt]],
+}
+,
+Other = {
+[[share/luaxml/etc/LuaXml.cdr]],
+[[share/luaxml/etc/LuaXml.png]],
+}
+,
+}
+
+license = "MIT/X11"
+url = "http://www.viremo.de/LuaXML/"
+name = "luaxml"

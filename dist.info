@@ -1,0 +1,35 @@
+type = "x86"
+arch = "Windows"
+author = "Gerald Franz"
+depends = {
+[[lua ~> 5.1]],
+}
+
+desc = "A minimal set of XML processing function in Lua, with simple mapping between XML and Lua tables"
+version = "1.7.3"
+maintainer = "Peter Drahoš"
+files = {
+Runtime = {
+[[lib\lua\luaXML_lib.dll]],
+[[lib\lua\LuaXml.lua]],
+}
+,
+Other = {
+[[share\luaxml\etc\LuaXml.cdr]],
+[[share\luaxml\etc\LuaXml.png]],
+}
+,
+Data = {
+[[share\luaxml\readme.txt]],
+}
+,
+Test = {
+[[share\luaxml\test\test.lua]],
+[[share\luaxml\test\test.xml]],
+}
+,
+}
+
+license = "MIT/X11"
+name = "luaxml"
+url = "http://www.viremo.de/LuaXML/"

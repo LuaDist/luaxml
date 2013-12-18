@@ -1,7 +1,7 @@
 package = "LuaXML"
 version = "1.7.5-1"
 source = {
-   url = "git://github.com/beatgammit/luaxml",
+   url = "git://github.com/LuaDist/luaxml",
    dir = '.'
 }
 description = {

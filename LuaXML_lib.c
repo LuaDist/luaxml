@@ -1,8 +1,8 @@
 /**
 LuaXML License
 
-LuaXml is licensed under the terms of the MIT license reproduced below,
-the same as Lua itself. This means that LuaXml is free software and can be
+LuaXML is licensed under the terms of the MIT license reproduced below,
+the same as Lua itself. This means that LuaXML is free software and can be
 used for both academic and commercial purposes at absolutely no cost.
 
 Copyright (C) 2007-2009 Gerald Franz, www.viremo.de
@@ -345,7 +345,7 @@ int Xml_eval(lua_State *L) {
 int Xml_load (lua_State *L) {
 	const char * filename = luaL_checkstring(L,1);
 	FILE * file=fopen(filename,"r");
-	if(!file) return luaL_error(L,"LuaXml ERROR: \"%s\" file error or file not found!",filename);
+	if(!file) return luaL_error(L,"LuaXML ERROR: \"%s\" file error or file not found!",filename);
 
 	fseek (file , 0 , SEEK_END);
 	size_t sz = ftell (file);
@@ -366,7 +366,7 @@ int Xml_registerCode(lua_State *L) {
     size_t i;
     for(i=0; i<sv_code_size; i+=2)
         if(strcmp(sv_code[i],decoded)==0)
-            return luaL_error(L,"LuaXml ERROR: code already exists.");
+            return luaL_error(L,"LuaXML ERROR: code already exists.");
 	if(sv_code_size+2>sv_code_capacity) {
 		sv_code_capacity*=2;
 		sv_code = (char**)realloc(sv_code, sv_code_capacity*sizeof(char*));
